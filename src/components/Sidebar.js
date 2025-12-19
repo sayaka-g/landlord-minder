@@ -1,5 +1,6 @@
 import React from "react";
 import { Drawer, List, ListItemButton, ListItemText, Toolbar, Box, ListItem, ListItemIcon, Divider } from "@mui/material";
+import HomeIcon from '@mui/icons-material/Home';
 import BedroomChildIcon from '@mui/icons-material/BedroomChild';
 import PersonIcon from '@mui/icons-material/Person';
 import DateRangeIcon from '@mui/icons-material/DateRange';
@@ -31,7 +32,15 @@ const Sidebar = () => {
             <Box sx={{ overflow: 'auto' }}>
                 <List>
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/dashboard/houses")}>
+                            <ListItemIcon>
+                                <HomeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Houses" />
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemButton onClick={() => navigate("/dashboard/rooms")}>
                             <ListItemIcon>
                                 <BedroomChildIcon />
                             </ListItemIcon>
