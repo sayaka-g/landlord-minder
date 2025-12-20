@@ -48,7 +48,7 @@ const Sidebar = () => {
                         </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/dashboard/tenants")}>
                             <ListItemIcon>
                                 <PersonIcon />
                             </ListItemIcon>

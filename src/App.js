@@ -12,6 +12,10 @@ import HousesPage from "./pages/HousesPage";
 import HouseDetailPage from "./pages/HouseDetailPage";
 import HouseCreatePage from "./pages/HouseCreatePage";
 import HouseEditPage from "./pages/HouseEditPage";
+import TenantsPage from "./pages/TenantsPage";
+import TenantDetailPage from "./pages/TenantDetailPage";
+import TenantCreatePage from "./pages/TenantCreatePage";
+import TenantEditPage from "./pages/TenantEditPage";
 
 function App() {
   return (
@@ -38,6 +42,12 @@ function App() {
             <Route path=":roomId" element={<RoomDetailPage />} />
             <Route path="new" element={<RoomCreatePage />} />
             <Route path=":roomId/edit" element={<RoomEditPage />} />
+          </Route>
+          <Route path="tenants">
+            <Route index element={<TenantsPage />} />
+            <Route path=":tenantId" element={<TenantDetailPage />} />
+            <Route path="new" element={<TenantCreatePage />} />
+            <Route path=":tenantId/edit" element={<TenantEditPage />} />
           </Route>
         </Route>
       </Routes>
