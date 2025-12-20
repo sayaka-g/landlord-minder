@@ -2,22 +2,22 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db, auth } from "../firebase";
-import HouseForm from "../components/houses/HouseForm";
+import TenantForm from "../components/tenants/TenantForm";
 import { Button, Typography } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-function HouseCreatePage() {
+function TenantCreatePage() {
     const navigate = useNavigate();
   
     const handleCreate = async (data) => {
-      await addDoc(collection(db, "houses"), {
+      await addDoc(collection(db, "tenants"), {
         ...data,
         deleted: false,
         landlordId: auth.currentUser.uid,
         createdAt: serverTimestamp(),
       });
   
-      navigate("/dashboard/houses");
+      navigate("/dashboard/tenants");
     };
   
     return (
@@ -25,15 +25,15 @@ function HouseCreatePage() {
         <Button
             variant="text"
             startIcon={<ArrowBackIcon />}
-            onClick={() => navigate("/dashboard/houses")}
+            onClick={() => navigate("/dashboard/tenants")}
             sx={{ mb: 2 }}
         >
-            Back to Houses
+            Back to Tenants
         </Button>
         <Typography variant="h4" sx={{ mb: 2 }}>
-                Create House       
+                Create Tenant       
         </Typography>
-        <HouseForm
+        <TenantForm
           initialValues={{
             name: "",
             email: "",
@@ -46,4 +46,4 @@ function HouseCreatePage() {
     );
   }
   
-  export default HouseCreatePage;
+  export default TenantCreatePage;
