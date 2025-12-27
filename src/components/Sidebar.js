@@ -56,7 +56,7 @@ const Sidebar = () => {
                         </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/dashboard/stays")}>
                             <ListItemIcon>
                                 <DateRangeIcon />
                             </ListItemIcon>
