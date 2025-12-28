@@ -31,6 +31,7 @@ const StaysPage = () => {
               where("deleted", "==", false)
             )
           );
+          
           const staysData = staysSnapshot.docs.map(doc => {
             const data = doc.data();
             return {
