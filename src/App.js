@@ -23,6 +23,10 @@ import StaysPage from "./pages/StaysPage";
 import StayDetailPage from "./pages/StayDetailPage";
 import StayCreatePage from "./pages/StayCreatePage";
 import StayEditPage from "./pages/StayEditPage";
+import FloatsPage from "./pages/FloatsPage";
+import FloatDetailPage from "./pages/FloatDetailPage";
+import FloatCreatePage from "./pages/FloatCreatePage";
+import FloatEditPage from "./pages/FloatEditPage";
 
 function App() {
   return (
@@ -65,6 +69,12 @@ function App() {
                 <Route path=":stayId" element={<StayDetailPage />} />
                 <Route path="new" element={<StayCreatePage />} />
                 <Route path=":stayId/edit" element={<StayEditPage />} />
+              </Route>
+              <Route path="floats">
+                <Route index element={<FloatsPage />} />
+                <Route path=":floatId" element={<FloatDetailPage />} />
+                <Route path="new" element={<FloatCreatePage />} />
+                <Route path=":floatId/edit" element={<FloatEditPage />} />
               </Route>
             </Route>
           </Routes>

@@ -88,11 +88,11 @@ const Sidebar = () => {
                         </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/dashboard/floats")}>
                             <ListItemIcon>
                                 <AccountBalanceWalletIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Balance" />
+                            <ListItemText primary="Floats" />
                         </ListItemButton>
                     </ListItem>
                     <ListItem>
