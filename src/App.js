@@ -27,6 +27,10 @@ import FloatsPage from "./pages/FloatsPage";
 import FloatDetailPage from "./pages/FloatDetailPage";
 import FloatCreatePage from "./pages/FloatCreatePage";
 import FloatEditPage from "./pages/FloatEditPage";
+import BillsPage from "./pages/BillsPage";
+import BillDetailPage from "./pages/BillDetailPage";
+import BillCreatePage from "./pages/BillCreatePage";
+import BillEditPage from "./pages/BillEditPage";
 
 function App() {
   return (
@@ -75,6 +79,12 @@ function App() {
                 <Route path=":floatId" element={<FloatDetailPage />} />
                 <Route path="new" element={<FloatCreatePage />} />
                 <Route path=":floatId/edit" element={<FloatEditPage />} />
+              </Route>
+              <Route path="bills">
+                <Route index element={<BillsPage />} />
+                <Route path=":billId" element={<BillDetailPage />} />
+                <Route path="new" element={<BillCreatePage />} />
+                <Route path=":billId/edit" element={<BillEditPage />} />
               </Route>
             </Route>
           </Routes>

@@ -64,7 +64,7 @@ const Sidebar = () => {
                         </ListItemButton>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton>
+                        <ListItemButton onClick={() => navigate("/dashboard/bills")}>
                             <ListItemIcon>
                                 <ElectricBoltIcon />
                             </ListItemIcon>
